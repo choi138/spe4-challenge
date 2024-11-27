@@ -1,6 +1,6 @@
 import {gql} from '@apollo/client';
 
-export const getLocations = gql`
+export const getLocationsQueryDocument = gql`
   query GetLocations {
     locations {
       id
