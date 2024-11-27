@@ -16,6 +16,7 @@
     "react-native": "0.76.3",
     "react-native-reanimated": "^3.16.3",
     "rescript-react-native": "^0.74.1",
+    "rooks": "^7.14.1",
     "wonka": "^6.3.4"
   },
   "devDependencies": {

@@ -1,7 +1,7 @@
 import {Stack, StacksProvider} from '@mobily/stacks';
 import React from 'react';
 import {SafeAreaView, ScrollView} from 'react-native';
-import {AnimatedBox, Box, Divider} from './src';
+import {AnimatedBox, Box, Divider, Timer} from './src';
 
 export const App: React.FC = () => {
   return (
@@ -15,7 +15,8 @@ export const App: React.FC = () => {
             <Box.padding />
             <Box.margin />
           </Stack> */}
-          <AnimatedBox />
+          {/* <AnimatedBox /> */}
+          <Timer />
         </ScrollView>
       </StacksProvider>
     </SafeAreaView>
