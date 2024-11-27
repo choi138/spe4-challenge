@@ -1,1 +1,1 @@
-export * from './AlignX';
+export * from './Box';

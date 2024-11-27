@@ -1,20 +1,19 @@
 import React from 'react';
-import {View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 
-export interface PlaceHolderProps {
-  width: number;
+export interface PlaceholderProps {
+  width?: number;
 }
 
-export const PlaceHolder: React.FC<PlaceHolderProps> = ({width}) => {
-  return (
-    <View
-      style={{
-        width,
-        height: 60,
-        backgroundColor: 'rgba(97, 0, 255, 0.05)',
-        borderColor: 'rgba(97, 0, 255, 0.3)',
-        borderWidth: 1,
-      }}
-    />
-  );
+export const Placeholder: React.FC<PlaceholderProps> = ({width}) => {
+  return <View style={[styles.placeholder, {width: width || '100%'}]} />;
 };
+
+const styles = StyleSheet.create({
+  placeholder: {
+    height: 60,
+    backgroundColor: 'rgba(97, 0, 255, 0.05)',
+    borderColor: 'rgba(97, 0, 255, 0.3)',
+    borderWidth: 1,
+  },
+});
