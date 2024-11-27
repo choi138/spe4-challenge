@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
-import {Text} from 'react-native';
-import {useIntervalWhen} from 'rooks';
+import React, { useState } from 'react';
+import { Text } from 'react-native';
+
+import { useIntervalWhen } from 'rooks';
 
 export const Timer: React.FC = () => {
   const [value, setValue] = useState(3);

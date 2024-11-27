@@ -1,9 +1,10 @@
-import {Stack, StacksProvider} from '@mobily/stacks';
 import React from 'react';
-import {SafeAreaView, ScrollView} from 'react-native';
-import {AnimatedBox, Box, Divider, Locations, Timer} from './src';
+import { SafeAreaView, ScrollView } from 'react-native';
 
-import {ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client';
+import { Stack, StacksProvider } from '@mobily/stacks';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+
+import { AnimatedBox, Box, Divider, Locations, Timer } from './src';
 
 const client = new ApolloClient({
   uri: 'https://flyby-locations-sub.herokuapp.com/',

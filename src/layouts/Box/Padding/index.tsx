@@ -1,7 +1,9 @@
-import {Box, Stack} from '@mobily/stacks';
 import React from 'react';
-import {Placeholder} from '../../../components';
-import {Text} from 'react-native';
+import { Text } from 'react-native';
+
+import { Box, Stack } from '@mobily/stacks';
+
+import { Placeholder } from '../../../components';
 
 export const Padding: React.FC = () => {
   return (

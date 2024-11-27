@@ -1,6 +1,6 @@
 import React from 'react';
-import {Button, StyleSheet, View} from 'react-native';
-import Animated, {useSharedValue, withTiming} from 'react-native-reanimated';
+import { Button, StyleSheet, View } from 'react-native';
+import Animated, { useSharedValue, withTiming } from 'react-native-reanimated';
 
 const DURATION = 300;
 
@@ -15,7 +15,7 @@ export const AnimatedBox: React.FC = () => {
 
   return (
     <View>
-      <Animated.View style={[styles.box, {opacity}]} />
+      <Animated.View style={[styles.box, { opacity }]} />
       <Button onPress={onPressToggleOpacity} title="Click me" />
     </View>
   );

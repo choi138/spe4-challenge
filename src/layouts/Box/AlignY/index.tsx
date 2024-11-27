@@ -1,7 +1,9 @@
-import {Box} from '@mobily/stacks';
 import React from 'react';
-import {Placeholder} from '../../../components';
-import {StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+
+import { Box } from '@mobily/stacks';
+
+import { Placeholder } from '../../../components';
 
 export const AlignY: React.FC = () => {
   return (
