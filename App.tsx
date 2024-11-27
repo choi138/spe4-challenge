@@ -1,20 +1,21 @@
 import {Stack, StacksProvider} from '@mobily/stacks';
 import React from 'react';
 import {SafeAreaView, ScrollView} from 'react-native';
-import {Box} from './src';
+import {AnimatedBox, Box, Divider} from './src';
 
 export const App: React.FC = () => {
   return (
     <SafeAreaView>
       <StacksProvider spacing={4}>
         <ScrollView>
-          <Stack space={40} padding={4}>
+          {/* <Stack space={10} padding={4} divider={<Divider />}>
             <Box.alignX />
             <Box.alignY />
             <Box.flex />
             <Box.padding />
             <Box.margin />
-          </Stack>
+          </Stack> */}
+          <AnimatedBox />
         </ScrollView>
       </StacksProvider>
     </SafeAreaView>
