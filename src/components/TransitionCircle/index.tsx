@@ -13,7 +13,6 @@ export const TransitionCircle: React.FC<TransitionCircleProps> = ({ backgroundCo
   const opacity = useSharedValue(0);
 
   const onPressToggleOpacity = () => {
-    console.log('onPressToggleOpacity');
     const isOpacityVisible = Math.ceil(opacity.value) === 1;
 
     opacity.value = withTiming(isOpacityVisible ? 0 : 1, {
