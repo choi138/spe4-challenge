@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
+import { colors } from 'src/styles';
+
 export interface PlaceholderProps {
   width?: number;
 }
@@ -12,8 +14,8 @@ export const Placeholder: React.FC<PlaceholderProps> = ({ width }) => {
 const styles = StyleSheet.create({
   placeholder: {
     height: 60,
-    backgroundColor: 'rgba(97, 0, 255, 0.05)',
-    borderColor: 'rgba(97, 0, 255, 0.3)',
+    backgroundColor: colors.darkPurple,
+    borderColor: colors.purple,
     borderWidth: 1,
   },
 });

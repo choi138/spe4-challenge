@@ -1,35 +1,49 @@
 import React from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import {
+  Image,
+  StyleSheet,
+  Text,
+  TouchableWithoutFeedback,
+  TouchableWithoutFeedbackProps,
+  View,
+} from 'react-native';
 
 import { Box } from '@mobily/stacks';
 
-export interface LocationInfoBoxProps {
+import { colors } from 'src/styles';
+
+export interface LocationInfoBoxCustomProps {
   imageUri: string;
   name: string;
   description: string;
 }
 
+export type LocationInfoBoxProps = LocationInfoBoxCustomProps & TouchableWithoutFeedbackProps;
+
 export const LocationInfoBox: React.FC<LocationInfoBoxProps> = ({
   imageUri,
   name,
   description,
+  ...props
 }) => {
   return (
-    <Box padding={2} style={styles.box}>
-      <Image source={{ uri: imageUri }} style={styles.image} />
-      <View style={styles.infoContainer}>
-        <Text style={styles.infoText}>{name}</Text>
-        <Text style={styles.infoText} numberOfLines={1} ellipsizeMode="tail">
-          {description}
-        </Text>
-      </View>
-    </Box>
+    <TouchableWithoutFeedback {...props}>
+      <Box padding={2} style={styles.box}>
+        <Image source={{ uri: imageUri }} style={styles.image} />
+        <View style={styles.infoContainer}>
+          <Text style={styles.infoText}>{name}</Text>
+          <Text style={styles.infoText} numberOfLines={1} ellipsizeMode="tail">
+            {description}
+          </Text>
+        </View>
+      </Box>
+    </TouchableWithoutFeedback>
   );
 };
 
 const styles = StyleSheet.create({
   box: {
-    backgroundColor: 'rgba(224, 251, 225, 1)',
+    backgroundColor: colors.mint,
     borderRadius: 12,
     padding: 16,
     flexDirection: 'row',

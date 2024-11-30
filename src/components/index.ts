@@ -1,6 +1,4 @@
 export * from './PlaceHolder';
-export * from './Divider';
-export * from './AnimatedBox';
+export * from './TransitionCircle';
 export * from './Timer';
-export * from './Locations';
 export * from './LocationInfoBox';
