@@ -55,6 +55,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   innerContainer: {
+    minHeight: '100%',
     padding: 18,
     rowGap: 40,
     justifyContent: 'space-between',

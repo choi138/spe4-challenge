@@ -1,7 +1,5 @@
 import React, { forwardRef, useMemo } from 'react';
-import { StyleSheet, Text, TextInput, TextInputProps } from 'react-native';
-
-import { Row, Rows } from '@mobily/stacks';
+import { StyleSheet, Text, TextInput, TextInputProps, View } from 'react-native';
 
 import { colors } from 'src/styles';
 
@@ -17,20 +15,17 @@ export const Input = forwardRef<TextInput, InputProps>(({ errorMessage, ...props
   }, [errorMessage]);
 
   return (
-    <Rows padding={3} space={2} style={{ position: 'relative' }}>
-      <Row width="fluid">
-        <TextInput ref={ref} {...props} style={[styles.input, { borderColor }]} />
-      </Row>
-      {errorMessage && (
-        <Row width="fluid">
-          <Text style={styles.errorMessage}>{errorMessage}</Text>
-        </Row>
-      )}
-    </Rows>
+    <View style={styles.container}>
+      <TextInput ref={ref} {...props} style={[styles.input, { borderColor }]} />
+      {errorMessage && <Text style={styles.errorMessage}>{errorMessage}</Text>}
+    </View>
   );
 });
 
 const styles = StyleSheet.create({
+  container: {
+    rowGap: 10,
+  },
   input: {
     paddingVertical: 16,
     paddingHorizontal: 14,
